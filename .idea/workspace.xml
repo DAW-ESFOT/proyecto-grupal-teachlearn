@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="125dbac5-cc0d-4dfa-bd92-6cc50baf7954" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,11 +144,18 @@
       <option name="presentableId" value="Default" />
       <updated>1608676027295</updated>
       <workItem from="1608676028505" duration="977000" />
-      <workItem from="1608762311252" duration="2021000" />
+      <workItem from="1608762311252" duration="4432000" />
+      <workItem from="1609204351807" duration="3714000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="605" y="204" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1609206813973">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="605" y="204" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860@0.0.1600.860" timestamp="1609206813973" />
   </component>
 </project>
