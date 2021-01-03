@@ -16,10 +16,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="125dbac5-cc0d-4dfa-bd92-6cc50baf7954" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -170,7 +167,7 @@
       <workItem from="1609552655236" duration="3027000" />
       <workItem from="1609688960816" duration="1155000" />
       <workItem from="1609692885359" duration="10977000" />
-      <workItem from="1609709397678" duration="2371000" />
+      <workItem from="1609709397678" duration="3059000" />
     </task>
     <servers />
   </component>

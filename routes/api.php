@@ -43,20 +43,20 @@ Route::delete('users/{id}', function($id){
 Route::get('tutorials', function(){
     return Tutorial::all();
 });
-Route::get('tutorials/{id_tutorial}', function($id_tutorial){
-    return Tutorial::find($id_tutorial);
+Route::get('tutorials/{id}', function($id){
+    return Tutorial::find($id);
 });
 Route::post('tutorials', function(Request $request){
     return Tutorial::create($request->all());
 });
-Route::put('tutorials/{id_tutorial}', function(Request $request, $id_tutorial){
-    $tutorial = Tutorial::findOrFail($id_tutorial);
+Route::put('tutorials/{id}', function(Request $request, $id){
+    $tutorial = Tutorial::findOrFail($id);
     $tutorial->update($request->all());
 
     return $tutorial;
 });
-Route::delete('tutorials/{id_tutorial}', function($id_tutorial){
-    Tutorial::find($id_tutorial)->delete();
+Route::delete('tutorials/{id}', function($id){
+    Tutorial::find($id)->delete();
     return 204;
 });
 
@@ -65,19 +65,19 @@ Route::delete('tutorials/{id_tutorial}', function($id_tutorial){
 Route::get('subjects', function(){
     return Subject::all();
 });
-Route::get('subjects/{id_subject}', function($id_subject){
-    return Subject::find($id_subject);
+Route::get('subjects/{id}', function($id){
+    return Subject::find($id);
 });
 Route::post('subjects', function(Request $request){
     return Subject::create($request->all());
 });
-Route::put('subjects/{id_subject}', function(Request $request, $id_subject){
-    $subject = Subject::findOrFail($id_subject);
+Route::put('subjects/{id}', function(Request $request, $id){
+    $subject = Subject::findOrFail($id);
     $subject->update($request->all());
 
     return $subject;
 });
-Route::delete('subjects/{id_subject}', function($id_subject){
-    Subject::find($id_subject)->delete();
+Route::delete('subjects/{id}', function($id){
+    Subject::find($id)->delete();
     return 204;
 });
