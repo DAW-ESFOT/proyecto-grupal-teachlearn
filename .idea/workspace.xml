@@ -187,13 +187,15 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="605" y="204" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1609206813973">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="545" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1609715930488">
+      <screen x="0" y="0" width="1440" height="860" />
     </state>
+    <state x="545" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.860/-800.91.800.560@0.0.1440.860" timestamp="1609715930488" />
     <state x="605" y="204" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860@0.0.1600.860" timestamp="1609206813973" />
-    <state x="530" y="183" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609703162578">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="477" y="183" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609716033525">
+      <screen x="0" y="0" width="1440" height="860" />
     </state>
+    <state x="477" y="183" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.860/-800.91.800.560@0.0.1440.860" timestamp="1609716033525" />
     <state x="530" y="183" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1600.860@0.0.1600.860" timestamp="1609703162578" />
     <state x="255" y="187" key="FileChooserDialogImpl" timestamp="1609286455594">
       <screen x="0" y="0" width="1600" height="860" />
