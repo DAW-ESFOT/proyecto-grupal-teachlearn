@@ -18,66 +18,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 //Users
-Route::get('users', function(){
-    return User::all();
-});
-Route::get('users/{id}', function($id){
-    return User::find($id);
-});
-Route::post('users', function(Request $request){
-    return User::create($request->all());
-});
-Route::put('users/{id}', function(Request $request, $id){
-    $user = User::findOrFail($id);
-    $user->update($request->all());
+Route::get('users', 'UserController@index');
+Route::get('users/{user}', 'UserController@show');
+Route::post('users', 'UserController@store');
+Route::put('users/{user}', 'UserController@update');
+Route::delete('users/{user}', 'UserController@delete');
 
-    return $user;
-});
-Route::delete('users/{id}', function($id){
-    User::find($id)->delete();
-    return 204;
-});
 
 
 //Tutorials
-Route::get('tutorials', function(){
-    return Tutorial::all();
-});
-Route::get('tutorials/{id}', function($id){
-    return Tutorial::find($id);
-});
-Route::post('tutorials', function(Request $request){
-    return Tutorial::create($request->all());
-});
-Route::put('tutorials/{id}', function(Request $request, $id){
-    $tutorial = Tutorial::findOrFail($id);
-    $tutorial->update($request->all());
-
-    return $tutorial;
-});
-Route::delete('tutorials/{id}', function($id){
-    Tutorial::find($id)->delete();
-    return 204;
-});
+Route::get('tutorials', 'TutorialController@index');
+Route::get('tutorials/{tutorial}', 'TutorialController@show');
+Route::post('tutorials', 'TutorialController@store');
+Route::put('tutorials/{tutorial}', 'TutorialController@update');
+Route::delete('tutorials/{tutorial}', 'TutorialController@delete');
 
 
 //Subjects
-Route::get('subjects', function(){
-    return Subject::all();
-});
-Route::get('subjects/{id}', function($id){
-    return Subject::find($id);
-});
-Route::post('subjects', function(Request $request){
-    return Subject::create($request->all());
-});
-Route::put('subjects/{id}', function(Request $request, $id){
-    $subject = Subject::findOrFail($id);
-    $subject->update($request->all());
-
-    return $subject;
-});
-Route::delete('subjects/{id}', function($id){
-    Subject::find($id)->delete();
-    return 204;
-});
+Route::get('subjects', 'SubjectController@index');
+Route::get('subjects/{subject}', 'SubjectController@show');
+Route::post('subjects', 'SubjectController@store');
+Route::put('subjects/{subject}', 'SubjectController@update');
+Route::delete('subjects/{subject}', 'SubjectController@delete');
