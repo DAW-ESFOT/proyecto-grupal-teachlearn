@@ -15,10 +15,11 @@ class CreateTutorialsTable extends Migration
     {
         Schema::create('tutorials', function (Blueprint $table) {
             $table->bigIncrements('id_tutorial');
-            $table->dateTime('date_and_hour');
+            $table->date('date');
+            $table->time('hour');
             $table->float('pay_values');
             $table->string('image');
-            $table->time('duration');
+            $table->integer('duration');
             $table->timestamps();
         });
     }
