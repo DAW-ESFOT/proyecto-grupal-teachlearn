@@ -14,7 +14,7 @@ class CreateTutorialsTable extends Migration
     public function up()
     {
         Schema::create('tutorials', function (Blueprint $table) {
-            $table->bigIncrements('id_tutorial');
+            $table->bigIncrements('id');
             $table->date('date');
             $table->time('hour');
             $table->float('pay_values');
