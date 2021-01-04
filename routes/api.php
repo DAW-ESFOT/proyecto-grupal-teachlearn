@@ -18,25 +18,30 @@ use Illuminate\Support\Facades\Route;
 */
 
 //Users
-Route::get('users', 'UserController@index');
-Route::get('users/{user}', 'UserController@show');
-Route::post('users', 'UserController@store');
-Route::put('users/{user}', 'UserController@update');
-Route::delete('users/{user}', 'UserController@delete');
 
+Route::post('register', 'UserController@register');
+Route::post('login', 'UserController@authenticate');
 
-
-//Tutorials
-Route::get('tutorials', 'TutorialController@index');
-Route::get('tutorials/{tutorial}', 'TutorialController@show');
-Route::post('tutorials', 'TutorialController@store');
-Route::put('tutorials/{tutorial}', 'TutorialController@update');
-Route::delete('tutorials/{tutorial}', 'TutorialController@delete');
-
-
-//Subjects
-Route::get('subjects', 'SubjectController@index');
+Route::get('subject', 'SubjectController@index');
 Route::get('subjects/{subject}', 'SubjectController@show');
-Route::post('subjects', 'SubjectController@store');
-Route::put('subjects/{subject}', 'SubjectController@update');
-Route::delete('subjects/{subject}', 'SubjectController@delete');
+
+Route::group(['middleware' => ['jwt.verify']], function() {
+    Route::get('users', 'UserController@index');
+    Route::get('users/{user}', 'SubjectController@show');
+    Route::post('users', 'UserController@store');
+    Route::put('users/{user}', 'UserController@update');
+    Route::delete('users/{user}', 'UserController@delete');
+
+    Route::get('tutorials', 'TutorialController@index');
+    Route::get('tutorials/{tutorial}', 'TutorialController@show');
+    Route::post('tutorials', 'TutorialController@store');
+    Route::put('tutorials/{tutorial}', 'TutorialController@update');
+    Route::delete('tutorials/{tutorial}', 'TutorialController@delete');
+
+    Route::post('subjects', 'SubjectController@store');
+    Route::put('subjects/{subject}', 'SubjectController@update');
+    Route::delete('subjects/{subject}', 'SubjectController@delete');
+});
+
+
+
