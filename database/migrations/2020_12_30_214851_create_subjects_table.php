@@ -20,6 +20,7 @@ class CreateSubjectsTable extends Migration
             $table->string('topic');
             $table->timestamps();
         });
+
     }
 
     /**
