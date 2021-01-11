@@ -49,4 +49,12 @@ class User extends Authenticatable implements JWTSubject
     {
         return $this->hasMany('App\Tutorial');
     }
+    public function comments()
+    {
+        return $this->belongsTo('App\Comment');
+    }
+    public function subjects()
+    {
+        return $this->belongsToMany('App\Subject')->as('subscriptions')->withTimestamps();
+    }
 }
