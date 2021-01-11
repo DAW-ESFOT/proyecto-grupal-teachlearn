@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tutorial extends Model
 {
-    protected $fillable = ['date','hour', 'pay_values','image','duration'];
+    protected $fillable = ['date','hour','observation','topic', 'price','image','duration'];
     public function user()
     {
         return $this->belongsTo('App\User');
