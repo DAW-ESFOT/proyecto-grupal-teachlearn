@@ -15,10 +15,10 @@ class CreateCommentsTable extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('text',400);
-            $table->timestamps();
-        });
+            $table->text('text');
+            $table->timestamps();});
     }
+
 
     /**
      * Reverse the migrations.
@@ -28,6 +28,5 @@ class CreateCommentsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('comments');
-
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddUserIdColumnTutorial extends Migration
+class AddSubjectIdColumnTutorial extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class AddUserIdColumnTutorial extends Migration
      */
     public function up()
     {
-        Schema::table('tutorials', function (Blueprint $table) {
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('restrict');
+        Schema::create('tutorials', function (Blueprint $table) {
+            $table->unsignedBigInteger('subject_id');
+            $table->foreign('subject_id')->references('id')->on('subjects')->onDelete('restrict');
         });
     }
 
@@ -26,8 +26,8 @@ class AddUserIdColumnTutorial extends Migration
      */
     public function down()
     {
-        Schema::table('tutorials', function (Blueprint $table) {
-            $table->dropForeign(['user_id']);
+        Schema::table('subjects', function (Blueprint $table) {
+            $table->dropForeign(['subject_id']);
         });
     }
 }
