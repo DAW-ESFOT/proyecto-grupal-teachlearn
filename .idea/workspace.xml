@@ -25,7 +25,7 @@
       <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/SubjectsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/SubjectsTableSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/TutorialsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/TutorialsTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterDir="false" /
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,6 +179,8 @@
       <workItem from="1609688960816" duration="1155000" />
       <workItem from="1609692885359" duration="10977000" />
       <workItem from="1609709397678" duration="3059000" />
+      <workItem from="1609940603683" duration="935000" />
+      <workItem from="1610392576492" duration="2521000" />
     </task>
     <servers />
   </component>
@@ -208,9 +210,10 @@
     </state>
     <state x="477" y="183" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.860/-800.91.800.560@0.0.1440.860" timestamp="1609716033525" />
     <state x="530" y="183" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1600.860@0.0.1600.860" timestamp="1609703162578" />
-    <state x="255" y="187" key="FileChooserDialogImpl" timestamp="1609286455594">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="230" y="187" key="FileChooserDialogImpl" timestamp="1609940717342">
+      <screen x="0" y="0" width="1440" height="860" />
     </state>
+    <state x="230" y="187" key="FileChooserDialogImpl/0.0.1440.860/-800.91.800.560@0.0.1440.860" timestamp="1609940717342" />
     <state x="255" y="187" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1609286455594" />
     <state x="456" y="190" key="run.anything.popup" timestamp="1609707617220">
       <screen x="0" y="0" width="1600" height="860" />

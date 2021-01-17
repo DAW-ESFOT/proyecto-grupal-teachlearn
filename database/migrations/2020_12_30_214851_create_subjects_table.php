@@ -19,6 +19,14 @@ class CreateSubjectsTable extends Migration
             $table->enum('level',['basic','highSchool']);
             $table->timestamps();
         });
+        Schema::create('subject_user', function (Blueprint $table) {
+            $table->unsignedBigInteger('subject_id');
+            $table->foreign('subject_id')->references('id')->on('subjects')->onDelete('restrict');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('restrict');
+            $table->timestamps();
+        });
+
     }
 
     /**
