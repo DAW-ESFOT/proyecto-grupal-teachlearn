@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tutorial extends Model
 {
-    protected $fillable = ['date','hour', 'pay_values','image','duration'];
+    protected $fillable = ['date','hour', 'price','observation','topic','image','duration'];
 }

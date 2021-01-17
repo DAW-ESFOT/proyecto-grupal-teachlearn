@@ -17,7 +17,9 @@ class CreateTutorialsTable extends Migration
             $table->bigIncrements('id');
             $table->date('date');
             $table->time('hour');
-            $table->float('pay_values');
+            $table->string('observation');
+            $table->string('topic');
+            $table->string('price');
             $table->string('image');
             $table->integer('duration');
             $table->timestamps();
