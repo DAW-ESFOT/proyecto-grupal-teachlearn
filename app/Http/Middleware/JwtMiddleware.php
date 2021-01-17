@@ -13,6 +13,8 @@ class JwtMiddleware
      * @param  \Closure  $next
      * @return mixed
      */
+    //correcciones
+
     public function handle($request, Closure $next)
     {
         return $next($request);
