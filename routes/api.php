@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 Route::post('register', 'UserController@register');
 Route::post('login', 'UserController@authenticate');
 
-Route::get('subject', 'SubjectController@index');
+Route::get('subjects', 'SubjectController@index');
 Route::get('subjects/{subject}', 'SubjectController@show');
 
 Route::group(['middleware' => ['jwt.verify']], function() {
