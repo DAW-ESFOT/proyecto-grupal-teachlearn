@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Subject extends Model
 {
     protected $fillable = ['name','level'];
+
     public function tutorials()
     {
         return $this->belongsTo('App\Tutorial');
@@ -15,4 +16,5 @@ class Subject extends Model
     {
         return $this->belongsToMany('App\User')->as('subscriptions')->withTimestamps();
     }*/
+
 }

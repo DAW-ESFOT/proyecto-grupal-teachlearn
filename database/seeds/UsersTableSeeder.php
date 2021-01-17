@@ -21,25 +21,25 @@ class UsersTableSeeder extends Seeder
         // no se vuelva lento.
         $password = Hash::make('123123');
         User::create([
-            'name'=> 'Administrador',
-            'last_name'=> 'General',
-            'birthday'=> '1999-02-14',
-            'phone'=> '0987654321',
-            'email'=> 'admin@prueba.com',
-            'password'=> $password,
-            'role'=> 'teacher',
+            'name' => 'Administrador',
+            'last_name' => 'General',
+            'birthday' => '1999-02-14',
+            'phone' => '0987654321',
+            'email' => 'admin@prueba.com',
+            'password' => $password,
+            'role' => 'teacher',
         ]);
-
+        $role=['student','teacher'];
         // Generar algunos usuarios
-        for($i = 0; $i < 5 ; $i++) {
+        for ($i = 0; $i < 5; $i++) {
             User::create([
-                'name'=> $faker->firstName,
-                'last_name'=> $faker->lastName,
-                'birthday'=> $faker->date($format = 'Y-m-d', $max = 'now'),
-                'phone'=> '0987654321',
-                'email'=> $faker->email,
-                'password'=> $password,
-                'role'=> 'student',
+                'name' => $faker->firstName,
+                'last_name' => $faker->lastName,
+                'birthday' => $faker->date($format = 'Y-m-d', $max = 'now'),
+                'phone' => $faker-> phoneNumber,
+                'email' => $faker->email,
+                'password' => $password,
+                'role' => $faker->randomElement($role),
 
             ]);
         }

@@ -20,11 +20,13 @@
       <change beforePath="$PROJECT_DIR$/app/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Comment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Subject.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Subject.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Tutorial.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Tutorial.php" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_05_115430_add_subject_id_column_tutorial.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_05_120631_add_user_id_column_tutorial.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_11_144031_create_comments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_11_144031_create_comments_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_11_145116_add_user_id_column_comment.php" beforeDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

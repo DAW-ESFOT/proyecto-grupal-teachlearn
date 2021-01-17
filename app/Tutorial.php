@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tutorial extends Model
 {
+
     protected $fillable = ['date','hour','observation','topic', 'price','image','duration'];
     public function user()
     {
@@ -16,4 +17,5 @@ class Tutorial extends Model
     {
         return $this->belongsTo('App\Subject');
     }
+
 }

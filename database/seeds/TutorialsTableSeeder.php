@@ -19,13 +19,16 @@ class TutorialsTableSeeder extends Seeder
         // conviene hacerlo antes del for para que el seeder
         // no se vuelva lento.
         // Generar algunos tutorias
-        for($i = 0; $i < 20 ; $i++) {
+
+        for ($i = 0; $i < 20; $i++) {
             Tutorial::create([
-                'date'=>$faker->date($format = 'Y-m-d'),
-                'hour'=>$faker->time($format = 'H:i:s'),
-                'pay_values'=>'10',
-                'image'=>$faker->sentence,
-                'duration'=>'1',
+                'date' => $faker->date($format = 'Y-m-d'),
+                'hour' => $faker->time($format = 'H:i:s'),
+                'price' => '10',
+                'observation'=> $faker->sentence,
+                'topic'=> $faker->sentence,
+                'image' => $faker->sentence,
+                'duration' => '1',
             ]);
         }
     }
