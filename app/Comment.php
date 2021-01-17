@@ -7,9 +7,4 @@ use Illuminate\Database\Eloquent\Model;
 class Comment extends Model
 {
     protected $fillable = ['text'];
-    public function users(){
-        return $this->hasMany('App\User');
-    }
-
 }
-

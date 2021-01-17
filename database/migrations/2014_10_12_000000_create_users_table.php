@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('last_name');
             $table->date('birthday');
-            $table->string('phone',10); //verificar que sean números y que sean 10
+            $table->string('phone'); //verificar que sean números y que sean 10
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
