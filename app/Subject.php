@@ -12,9 +12,9 @@ class Subject extends Model
     {
         return $this->belongsTo('App\Tutorial');
     }
-    /*public function users()
+    public function users()
     {
         return $this->belongsToMany('App\User')->as('subscriptions')->withTimestamps();
-    }*/
+    }
 
 }
