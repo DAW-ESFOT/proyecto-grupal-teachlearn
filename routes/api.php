@@ -38,6 +38,7 @@ Route::group(['middleware' => ['jwt.verify']], function() {
     Route::put('tutorials/{tutorial}', 'TutorialController@update');
     Route::delete('tutorials/{tutorial}', 'TutorialController@delete');
 
+    //Revisar las rutas antes de hacer las consultas en postman
     Route::post('subjects', 'SubjectController@store');
     Route::put('subjects/{subject}', 'SubjectController@update');
     Route::delete('subjects/{subject}', 'SubjectController@delete');
