@@ -2,6 +2,7 @@
 
 use App\Tutorial;
 use Illuminate\Database\Seeder;
+use Tymon\JWTAuth\Facades\JWTAuth;
 
 class TutorialsTableSeeder extends Seeder
 {
@@ -20,16 +21,26 @@ class TutorialsTableSeeder extends Seeder
         // no se vuelva lento.
         // Generar algunos tutorias
 
-        for ($i = 0; $i < 20; $i++) {
-            Tutorial::create([
-                'date' => $faker->date($format = 'Y-m-d'),
-                'hour' => $faker->time($format = 'H:i:s'),
-                'price' => '10',
-                'observation'=> $faker->sentence,
-                'topic'=> $faker->sentence,
-                'image' => $faker->sentence,
-                'duration' => '1',
-            ]);
+
+        $users = App\User::all();
+        $subjects=App\Subject::all();
+        foreach ($users as $user) {
+            // iniciamos sesión con este usuario
+            JWTAuth::attempt(['email' => $user->email, 'password' => '123123']);
+            $num_tutorials=3;
+            for ($i = 0; $i < $num_tutorials; $i++) {
+                $subject=$faker->randomElement($subjects);
+                Tutorial::create([
+                    'date' => $faker->dateTime()->format('Y-m-d'),
+                    'hour' => $faker->time($format = 'H:i:s'),
+                    'price' => '10',
+                    'observation' => $faker->sentence,
+                    'topic' => $faker->sentence,
+                    'image' => $faker->sentence,
+                    'duration' => '1',
+                    'subject_id'=>$subject->id,
+                ]);
+            }
         }
     }
 }

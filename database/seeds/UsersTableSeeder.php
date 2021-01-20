@@ -1,5 +1,6 @@
 <?php
 
+use App\Subject;
 use App\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
@@ -32,16 +33,27 @@ class UsersTableSeeder extends Seeder
         $role=['student','teacher'];
         // Generar algunos usuarios
         for ($i = 0; $i < 5; $i++) {
-            User::create([
+            $user=User::create([
                 'name' => $faker->firstName,
                 'last_name' => $faker->lastName,
                 'birthday' => $faker->date($format = 'Y-m-d', $max = 'now'),
                 'phone' => $faker-> phoneNumber,
                 'email' => $faker->email,
                 'password' => $password,
-                'role' => $faker->randomElement($role),
-
+                'role' => $faker->randomElement($role)
             ]);
+
+            $user->subjects()->saveMany(
+                 $faker->randomElements(
+                    array(
+                            Subject::find(1),
+                            Subject::find(2),
+                            Subject::find(3),
+                            Subject::find(4),
+                            Subject::find(5)
+                        ), $faker->numberBetween(1,5),false
+                )
+            );
         }
     }
 }

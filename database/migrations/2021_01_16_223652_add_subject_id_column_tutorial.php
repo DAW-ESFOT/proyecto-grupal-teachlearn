@@ -13,7 +13,7 @@ class AddSubjectIdColumnTutorial extends Migration
      */
     public function up()
     {
-        Schema::create('tutorials', function (Blueprint $table) {
+        Schema::table('tutorials', function (Blueprint $table) {
             $table->unsignedBigInteger('subject_id');
             $table->foreign('subject_id')->references('id')->on('subjects')->onDelete('restrict');
         });
@@ -26,8 +26,10 @@ class AddSubjectIdColumnTutorial extends Migration
      */
     public function down()
     {
-        Schema::table('subjects', function (Blueprint $table) {
+
+        Schema::table('tutorials', function (Blueprint $table) {
             $table->dropForeign(['subject_id']);
         });
+
     }
 }
