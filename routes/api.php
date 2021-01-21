@@ -46,6 +46,7 @@ Route::group(['middleware' => ['jwt.verify']], function() {
     Route::post('tutorials/{tutorial}/subjects','SubjectController@store');
     Route::put('tutorials/{tutorial}/subjects/{subject}','SubjectController@update');
     Route::delete('tutorials/{tutorial}/subjects/{subject}','SubjectController@delete');*/
+
 });
 
 
