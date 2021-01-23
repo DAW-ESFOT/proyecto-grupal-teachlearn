@@ -5,8 +5,9 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-use JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
+use Tymon\JWTAuth\Facades\JWTAuth;
+use App\Http\Resources\User as UserResource;
 
 
 class UserController extends Controller
@@ -70,7 +71,7 @@ class UserController extends Controller
         }
         return response()->json(compact('user'));
     }
-    public function index()
+   /* public function index()
     {
         return User::all();
     }
@@ -90,5 +91,5 @@ class UserController extends Controller
     {
         $user->delete();
         return response()->json(null,204);
-    }
+    }*/
     }

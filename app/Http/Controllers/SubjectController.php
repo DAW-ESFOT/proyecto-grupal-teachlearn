@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Subject;
 use Illuminate\Http\Request;
+use App\Http\Resources\Subject as SubjectResource;
 
 class SubjectController extends Controller
 {
@@ -11,9 +12,9 @@ class SubjectController extends Controller
     {
         return Subject::all();
     }
-    public function show($id)
+    public function show(Subject $subject)
     {
-        return Subject::find($id);
+        return response()->json(new SubjectResource($subject),200);
     }
     public function store(Request $request)
     {
