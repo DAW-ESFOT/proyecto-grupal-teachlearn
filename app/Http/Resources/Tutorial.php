@@ -20,8 +20,8 @@ class Tutorial extends JsonResource
             'hour'=>$this->hour,
             'observation'=>$this->observation,
             'topic'=>$this->topic,
-            'user'=>"/api/users". $this->user_id,
-            'subject'=>"/api/subjects".$this->subject_id,
+            'user'=>'/api/users/' . $this->user_id,
+            'subject'=>'/api/subjects/' . $this->subject_id,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ];
