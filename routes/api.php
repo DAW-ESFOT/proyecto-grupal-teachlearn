@@ -36,6 +36,8 @@ Route::group(['middleware' => ['jwt.verify']], function() {
     Route::post('tutorials', 'TutorialController@store');
     Route::put('tutorials/{tutorial}', 'TutorialController@update');
     Route::delete('tutorials/{tutorial}', 'TutorialController@delete');
+    Route::get('tutorials/{tutorial}/image', 'TutorialController@image');
+
 
     Route::post('comments', 'CommentController@store');
     Route::put('comments/{comment}', 'CommentController@update');

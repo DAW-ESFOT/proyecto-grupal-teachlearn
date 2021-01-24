@@ -22,6 +22,7 @@ class Tutorial extends JsonResource
             'topic'=>$this->topic,
             'user'=>'/api/users/' . $this->user_id,
             'subject'=>'/api/subjects/' . $this->subject_id,
+            'image'=>$this->image,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ];

@@ -28,6 +28,7 @@ class TutorialsTableSeeder extends Seeder
             // iniciamos sesión con este usuario
             JWTAuth::attempt(['email' => $user->email, 'password' => '123123']);
             $num_tutorials=3;
+            $image_name=$faker->image('public/storage/tutorials',400,250,null,false);
             for ($i = 0; $i < $num_tutorials; $i++) {
                 $subject=$faker->randomElement($subjects);
                 Tutorial::create([
@@ -36,7 +37,8 @@ class TutorialsTableSeeder extends Seeder
                     'price' => '10',
                     'observation' => $faker->sentence,
                     'topic' => $faker->sentence,
-                    'image' => $faker->sentence,
+                    'image' => 'tutorials/'. $image_name,
+                    //'image'=>$faker->sentence,
                     'duration' => '1',
                     'subject_id'=>$subject->id,
                 ]);

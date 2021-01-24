@@ -6,6 +6,7 @@ use App\Tutorial;
 use Illuminate\Http\Request;
 use App\Http\Resources\Tutorial as TutorialResource;
 use App\Http\Resources\TutorialCollection;
+use Illuminate\Support\Facades\Storage;
 
 
 class TutorialController extends Controller
@@ -23,6 +24,11 @@ class TutorialController extends Controller
     {
         return response()->json(new TutorialResource($tutorial),200);
     }
+
+    public function image(Tutorial $tutorial)
+    {
+        return response()->download(public_path(Storage::url($tutorial->image)), $tutorial->voucher);
+    }
     public function store(Request $request)
     {
         $request->validate([
@@ -31,12 +37,16 @@ class TutorialController extends Controller
             'observation'=> 'required|string',
             'topic' =>'required|string',
             'price'=> 'required|string',
-            'image'=> 'required|string',
+            'image' => 'required|image',
+            //'image' => 'required|string',
             'duration'=>'required',
             'subject_id' => 'required|exists:subjects,id',
 
         ]);
         $tutorial = Tutorial::create($request->all());
+        $path = $request->image->store('public/tutorials');
+        $tutorial->image = $path;
+        $tutorial->save();
         return response()->json($tutorial, 201);
 
     }
