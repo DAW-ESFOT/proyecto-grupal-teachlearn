@@ -26,15 +26,17 @@ class CommentController extends Controller
         $comment = Comment::create($request->all());
         return response()->json($comment, 201);
     }
-    public function update(Request $request, $id)
+    public function update(Request $request, Comment $comment)
     {
-        $comment = Comment::findOrFail($id);
+        $request->validate([
+            'text'=>'required|string'
+        ]);
         $comment->update($request->all());
-        return $comment;
+        return response()->json($comment, 200);
     }
-    public function delete(Request $request, $id)
+    public function delete(Request $request, Comment $comment)
     {
-        $comment = Comment::findOrFail($id);
         $comment->delete();
-        return 204;}
+        return response()->json(null, 204);
+    }
 }
