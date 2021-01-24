@@ -19,7 +19,13 @@ class CommentController extends Controller
     }
     public function store(Request $request)
     {
-        return Comment::create($request->all());}
+        $request->validate([
+            'text'=>'required|string'
+        ]);
+
+        $comment = new Comment($request->all());
+        return response()->json(new CommentResource($comment), 201);
+    }
     public function update(Request $request, $id)
     {
         $comment = Comment::findOrFail($id);
