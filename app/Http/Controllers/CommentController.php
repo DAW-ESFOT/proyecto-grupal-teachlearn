@@ -11,14 +11,17 @@ class CommentController extends Controller
 {
     public function index()
     {
+        $this->authorize('viewAny', Comment::class);
         return new CommentCollection(Comment::paginate(3));
     }
     public function show(Comment $comment)
     {
+        $this->authorize('view', $comment);
         return response()->json(new CommentResource($comment),200);
     }
     public function store(Request $request)
     {
+        $this->authorize('create', Comment::class);
         $request->validate([
             'text'=>'required|string'
         ]);
@@ -28,6 +31,7 @@ class CommentController extends Controller
     }
     public function update(Request $request, Comment $comment)
     {
+        $this->authorize('update',$comment);
         $request->validate([
             'text'=>'required|string'
         ]);
@@ -36,6 +40,7 @@ class CommentController extends Controller
     }
     public function delete(Request $request, Comment $comment)
     {
+        $this->authorize('delete',$comment);
         $comment->delete();
         return response()->json(null, 204);
     }

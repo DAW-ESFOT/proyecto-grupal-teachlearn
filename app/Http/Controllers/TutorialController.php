@@ -33,6 +33,7 @@ class TutorialController extends Controller
     }
     public function store(Request $request)
     {
+
         $this->authorize('create', Tutorial::class);
         $request->validate([
             'date' => 'required|date',

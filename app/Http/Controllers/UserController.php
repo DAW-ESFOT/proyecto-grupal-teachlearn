@@ -12,6 +12,9 @@ use App\Http\Resources\User as UserResource;
 
 class UserController extends Controller
     {
+    private static $messages = [
+        'required'=>'El compo: atribute es obligatorio',
+    ];
         public function authenticate(Request $request)
         {
             $credentials = $request->only('email', 'password');
@@ -35,6 +38,7 @@ class UserController extends Controller
             'phone'=>'required',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+            'rol_type'=>'required|string',
             'role'=>'required|string|max:255',
             ]);
 
@@ -49,6 +53,7 @@ class UserController extends Controller
             'phone'=>$request->get('phone'),
             'email' => $request->get('email'),
             'password' => Hash::make($request->get('password')),
+            'rol_type' => $request->get('rol_type'),
             'role'=>$request->get('role'),
             ]);
 
@@ -71,25 +76,32 @@ class UserController extends Controller
         }
         return response()->json(compact('user'));
     }
-   /* public function index()
+
+    public function index()
     {
+        $this->authorize('viewAny', User::class);
         return User::all();
     }
     public function show(User $user){
-        return $user;
-    }
-    public function store(Request $request){
-        $user = User::create($request->all());
-        return response()->json($user,201);
+        $this->authorize('view', $user);
+        return response()->json(new UserResource($user),200);
     }
     public function update(Request $request, User $user)
     {
+        $this->authorize('update',$user);
+        $request->validate([
+            'name' => 'required|string',
+            'last_name' => 'required|string',
+            'phone'=> 'required|string',
+        ],self::$messages);
+
         $user->update($request->all());
-        return response()->json($user,200);
+        return response()->json($user, 200);
     }
     public function delete(User $user)
     {
+        $this->authorize('delete',$user);
         $user->delete();
-        return response()->json(null,204);
-    }*/
+        return response()->json(null, 204);
+    }
     }
