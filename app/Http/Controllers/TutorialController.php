@@ -17,11 +17,13 @@ class TutorialController extends Controller
     ];
     public function index()
     {
+        $this->authorize('viewAny', Tutorial::class);
         //return response()->json(new TutorialCollection(Tutorial::all()),200);
         return new TutorialCollection(Tutorial::paginate(10));
     }
     public function show(Tutorial $tutorial)
     {
+        $this->authorize('view', $tutorial);
         return response()->json(new TutorialResource($tutorial),200);
     }
 
@@ -31,6 +33,7 @@ class TutorialController extends Controller
     }
     public function store(Request $request)
     {
+        $this->authorize('create', Tutorial::class);
         $request->validate([
             'date' => 'required|date',
             'hour' => 'required|string',
@@ -52,6 +55,7 @@ class TutorialController extends Controller
     }
     public function update(Request $request, Tutorial $tutorial)
     {
+        $this->authorize('update',$tutorial);
         $request->validate([
             'date' => 'required|date',
             'hour' => 'required|string',
@@ -64,6 +68,7 @@ class TutorialController extends Controller
     }
     public function delete(Request $request, Tutorial $tutorial)
     {
+        $this->authorize('delete',$tutorial);
         $tutorial->delete();
         return response()->json(null, 204);
 
