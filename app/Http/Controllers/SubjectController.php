@@ -8,6 +8,10 @@ use App\Http\Resources\Subject as SubjectResource;
 
 class SubjectController extends Controller
 {
+
+    private static $messages = [
+        'required'=>'El campo: atribute es obligatorio',
+    ];
     public function index()
     {
         return Subject::all();
@@ -18,16 +22,26 @@ class SubjectController extends Controller
     }
     public function store(Request $request)
     {
-        return Subject::create($request->all());}
-    public function update(Request $request, $id)
-    {
-        $subject = Subject::findOrFail($id);
-        $subject->update($request->all());
-        return $subject;
+        $request->validate([
+            'name' => 'required|string',
+            'level' => 'required|string',
+        ], self::$messages);
+
+        $subject = Subject::create($request->all());
+        return response()->json($subject, 201);
     }
-    public function delete(Request $request, $id)
+    public function update(Request $request, Subject $subject)
     {
-        $subject = Subject::findOrFail($id);
+        $request->validate([
+            'level' => 'required|string',
+        ],self::$messages);
+        $subject->update($request->all());
+        return response()->json($subject, 200);
+    }
+    public function delete(Request $request, Subject $subject)
+    {
         $subject->delete();
-        return 204;}
+        return response()->json(null, 204);
+    }
+
 }

@@ -52,9 +52,10 @@ class TutorialController extends Controller
         $tutorial->update($request->all());
         return response()->json($tutorial, 200);
     }
-    public function delete(Request $request, $id)
+    public function delete(Request $request, Tutorial $tutorial)
     {
-        $tutorial = Tutorial::findOrFail($id);
         $tutorial->delete();
-        return 204;}
+        return response()->json(null, 204);
+
+    }
 }
