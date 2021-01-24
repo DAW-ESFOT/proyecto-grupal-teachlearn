@@ -28,10 +28,11 @@ class UsersTableSeeder extends Seeder
             'phone' => '0987654321',
             'email' => 'admin@prueba.com',
             'password' => $password,
-            'role' => 'teacher',
+            //'rol_type' => 'Admin',
+            'role'=> User::ROLE_SUPERADMIN,
         ]);
-        $role=['student','teacher'];
         // Generar algunos usuarios
+        $rol=['teacher','student'];
         for ($i = 0; $i < 5; $i++) {
             $user=User::create([
                 'name' => $faker->firstName,
@@ -40,18 +41,19 @@ class UsersTableSeeder extends Seeder
                 'phone' => $faker-> phoneNumber,
                 'email' => $faker->email,
                 'password' => $password,
-                'role' => $faker->randomElement($role)
+                'rol_type'=>$faker->randomElement($rol),
+                'role'=> User::ROLE_USER,
             ]);
 
             $user->subjects()->saveMany(
-                 $faker->randomElements(
+                $faker->randomElements(
                     array(
-                            Subject::find(1),
-                            Subject::find(2),
-                            Subject::find(3),
-                            Subject::find(4),
-                            Subject::find(5)
-                        ), $faker->numberBetween(1,5),false
+                        Subject::find(1),
+                        Subject::find(2),
+                        Subject::find(3),
+                        Subject::find(4),
+                        Subject::find(5)
+                    ), $faker->numberBetween(1,5),false
                 )
             );
         }

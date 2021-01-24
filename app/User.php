@@ -17,16 +17,14 @@ class User extends Authenticatable implements JWTSubject
      * @var array
      */
     protected $fillable = [
-        'name','last_name','birthday','phone','email','password','role'];
+        'name','last_name','birthday','phone','email','password','rol_type','role'];
 
     const ROLE_SUPERADMIN = 'ROLE_SUPERADMIN';
-    const ROLE_TEACHER = 'ROLE_TEACHER';
-    const ROLE_STUDENT = 'ROLE_STUDENT';
+    const ROLE_USER = 'ROLE_USER';
+
     private const ROLES_HIERARCHY = [
-        self::ROLE_SUPERADMIN => [self::ROLE_TEACHER,self::ROLE_STUDENT],
-        self::ROLE_TEACHER => [],
-        self::ROLE_STUDENT => []
-    ];
+        self::ROLE_SUPERADMIN => [self::ROLE_USER],
+        self::ROLE_USER=> [] ];
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -64,12 +62,13 @@ class User extends Authenticatable implements JWTSubject
     {
         return $this->belongsToMany('App\Subject')->as('subscriptions')->withTimestamps();
     }
+
     public function isGranted($role)
     {
-        if ($role === $this->rol) {
+        if ($role === $this->role) {
             return true;
         }
-        return self::isRoleInHierarchy($role, self::ROLES_HIERARCHY[$this->rol]);
+        return self::isRoleInHierarchy($role, self::ROLES_HIERARCHY[$this->role]);
     }
     private static function isRoleInHierarchy($role, $role_hierarchy)
     {

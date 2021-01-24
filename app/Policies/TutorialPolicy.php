@@ -23,7 +23,7 @@ class TutorialPolicy
      */
     public function viewAny(User $user)
     {
-        return $user->isGranted(User::ROLE_TEACHER||User::ROLE_STUDENT);
+        return $user->isGranted(User::ROLE_USER);
 
     }
 
@@ -36,7 +36,7 @@ class TutorialPolicy
      */
     public function view(User $user, Tutorial $tutorial)
     {
-        return $user->isGranted(User::ROLE_TEACHER||User::ROLE_STUDENT);
+        return $user->isGranted(User::ROLE_USER);
     }
 
     /**
@@ -47,7 +47,7 @@ class TutorialPolicy
      */
     public function create(User $user)
     {
-        return $user->isGranted(User::ROLE_STUDENT);
+        return $user->isGranted(User::ROLE_USER);
     }
 
     /**
@@ -59,7 +59,8 @@ class TutorialPolicy
      */
     public function update(User $user, Tutorial $tutorial)
     {
-        return $user->isGranted(User::ROLE_STUDENT) && $user->id === $tutorial->user_id;
+        return $user->isGranted(User::ROLE_USER) && $user->id === $tutorial->user_id;
+
     }
 
     /**
