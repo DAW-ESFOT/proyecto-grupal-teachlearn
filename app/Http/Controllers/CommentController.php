@@ -23,8 +23,8 @@ class CommentController extends Controller
             'text'=>'required|string'
         ]);
 
-        $comment = new Comment($request->all());
-        return response()->json(new CommentResource($comment), 201);
+        $comment = Comment::create($request->all());
+        return response()->json($comment, 201);
     }
     public function update(Request $request, $id)
     {

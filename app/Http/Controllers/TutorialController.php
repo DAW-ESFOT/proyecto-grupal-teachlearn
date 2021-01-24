@@ -33,18 +33,15 @@ class TutorialController extends Controller
             'price'=> 'required|string',
             'image'=> 'required|string',
             'duration'=>'required',
-            'user_id'=>'required|exists:users,id',
             'subject_id' => 'required|exists:subjects,id',
 
-        ], self::$messages);
-        //return Tutorial::create($request->all());
-        $tutorial = new Tutorial($request->all());
-        return response()->json(new TutorialResource($tutorial), 201);
+        ]);
+        $tutorial = Tutorial::create($request->all());
+        return response()->json($tutorial, 201);
 
     }
     public function update(Request $request, Tutorial $tutorial)
     {
-        $this->authorize('update',$tutorial);
         $request->validate([
             'date' => 'required|date',
             'hour' => 'required|string',
