@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 class Tutorial extends Model
 {
 
-    protected $fillable = ['date','hour','observation','topic', 'price','image','duration','subject_id','user_id'];
+    protected $fillable = ['date','hour','observation','topic', 'price','image','duration','subject_id'];
     public static function boot()
     {
         parent::boot();
