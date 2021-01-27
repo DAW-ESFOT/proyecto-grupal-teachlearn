@@ -17,14 +17,16 @@ class User extends Authenticatable implements JWTSubject
      * @var array
      */
     protected $fillable = [
-        'name','last_name','birthday','phone','email','password','rol_type','role'];
+        'name','last_name','birthday','phone','email','password','role'];
 
     const ROLE_SUPERADMIN = 'ROLE_SUPERADMIN';
-    const ROLE_USER = 'ROLE_USER';
+    const ROLE_TEACHER = 'ROLE_TEACHER';
+    const ROLE_STUDENT = 'ROLE_STUDENT';
 
     private const ROLES_HIERARCHY = [
-        self::ROLE_SUPERADMIN => [self::ROLE_USER],
-        self::ROLE_USER=> [] ];
+        self::ROLE_SUPERADMIN => [self::ROLE_TEACHER],
+        self::ROLE_TEACHER=> [self::ROLE_STUDENT] ,
+        self::ROLE_STUDENT=> [] ];
     /**
      * The attributes that should be hidden for arrays.
      *

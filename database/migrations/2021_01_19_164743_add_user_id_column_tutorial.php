@@ -14,8 +14,13 @@ class AddUserIdColumnTutorial extends Migration
     public function up()
     {
         Schema::table('tutorials', function (Blueprint $table) {
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('restrict');
+            $table->unsignedBigInteger('student_id');
+            $table->foreign('student_id')->references('id')->on('users')->onDelete('restrict');
+
+        });
+        Schema::table('tutorials', function (Blueprint $table) {
+            $table->unsignedBigInteger('teacher_id')->nullable();
+            $table->foreign('teacher_id')->references('id')->on('users')->onDelete('restrict');
         });
     }
 
@@ -28,7 +33,9 @@ class AddUserIdColumnTutorial extends Migration
     {
 
         Schema::table('tutorials', function (Blueprint $table) {
-            $table->dropForeign(['user_id']);
+            $table->dropForeign(['student_id']);
+            $table->dropForeign(['teacher_id']);
+
         });
 
     }

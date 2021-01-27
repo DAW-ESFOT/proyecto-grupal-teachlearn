@@ -38,8 +38,8 @@ class UserController extends Controller
             'phone'=>'required',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
-            'rol_type'=>'required|string',
-            'role'=>'required|string|max:255',
+            //'rol_type'=>'required|string',
+            'role'=>'required|string',
             ]);
 
         if($validator->fails()){
@@ -53,7 +53,7 @@ class UserController extends Controller
             'phone'=>$request->get('phone'),
             'email' => $request->get('email'),
             'password' => Hash::make($request->get('password')),
-            'rol_type' => $request->get('rol_type'),
+            //'rol_type' => $request->get('rol_type'),
             'role'=>$request->get('role'),
             ]);
 

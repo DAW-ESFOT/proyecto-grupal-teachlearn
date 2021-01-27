@@ -23,7 +23,7 @@ class TutorialPolicy
      */
     public function viewAny(User $user)
     {
-        return $user->isGranted(User::ROLE_USER);
+        return $user->isGranted(User::ROLE_STUDENT);
 
     }
 
@@ -36,7 +36,7 @@ class TutorialPolicy
      */
     public function view(User $user, Tutorial $tutorial)
     {
-        return $user->isGranted(User::ROLE_USER);
+        return $user->isGranted(User::ROLE_STUDENT);
     }
 
     /**
@@ -47,7 +47,7 @@ class TutorialPolicy
      */
     public function create(User $user)
     {
-        return $user->isGranted(User::ROLE_USER);
+        return $user->isGranted(User::ROLE_STUDENT);
     }
 
     /**
@@ -59,10 +59,13 @@ class TutorialPolicy
      */
     public function update(User $user, Tutorial $tutorial)
     {
-        return $user->isGranted(User::ROLE_USER) && $user->id === $tutorial->user_id;
+        return $user->isGranted(User::ROLE_STUDENT) && $user->id === $tutorial->student_id;
 
     }
 
+    public function choose(User $user, Tutorial $tutorial){
+        return $user->isGranted(User::ROLE_TEACHER) && $user->id === $tutorial->teacher_id;
+    }
     /**
      * Determine whether the user can delete the tutorial.
      *

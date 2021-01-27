@@ -32,8 +32,9 @@ class UsersTableSeeder extends Seeder
             'role'=> User::ROLE_SUPERADMIN,
         ]);
         // Generar algunos usuarios
-        $rol=['teacher','student'];
-        for ($i = 0; $i < 5; $i++) {
+       // $rol=['teacher','student'];
+        $role=['ROLE_STUDENT','ROLE_TEACHER'];
+        for ($i = 0; $i < 10; $i++) {
             $user=User::create([
                 'name' => $faker->firstName,
                 'last_name' => $faker->lastName,
@@ -41,8 +42,8 @@ class UsersTableSeeder extends Seeder
                 'phone' => $faker-> phoneNumber,
                 'email' => $faker->email,
                 'password' => $password,
-                'rol_type'=>$faker->randomElement($rol),
-                'role'=> User::ROLE_USER,
+                //'rol_type'=>$faker->randomElement($rol),
+                'role'=> $faker->randomElement($role),
             ]);
 
             $user->subjects()->saveMany(
