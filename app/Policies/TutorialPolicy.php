@@ -59,12 +59,16 @@ class TutorialPolicy
      */
     public function update(User $user, Tutorial $tutorial)
     {
-        return $user->isGranted(User::ROLE_STUDENT) && $user->id === $tutorial->student_id;
+        return $user->isGranted(User::ROLE_STUDENT) && $user->id;
 
     }
 
     public function choose(User $user, Tutorial $tutorial){
-        return $user->isGranted(User::ROLE_TEACHER) && $user->id === $tutorial->teacher_id;
+
+        if($tutorial->teacher_id===null){
+            return $user->isGranted(User::ROLE_TEACHER) && $user->id ;
+        }
+
     }
     /**
      * Determine whether the user can delete the tutorial.

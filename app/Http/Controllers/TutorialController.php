@@ -70,9 +70,7 @@ class TutorialController extends Controller
 
     public function accept(Request $request, Tutorial $tutorial)
     {
-        //$this->authorize('choose',$tutorial);
-
-
+        $this->authorize('choose',$tutorial);
         $tutorial->teacher_id = Auth::id();
         $tutorial->save();
         return response()->json($tutorial, 200);
