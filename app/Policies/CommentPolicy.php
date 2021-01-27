@@ -48,7 +48,7 @@ class CommentPolicy
      */
     public function create(User $user)
     {
-       return true;
+        return true;
     }
 
     /**
@@ -60,7 +60,7 @@ class CommentPolicy
      */
     public function update(User $user, Comment $comment)
     {
-       return $user->isGranted(User::ROLE_USER) && $user->id === $comment->user_id;
+       return $user->isGranted(User::ROLE_STUDENT) && $user->id === $comment->user_id;
     }
 
     /**

@@ -11,7 +11,7 @@ class CommentController extends Controller
 {
     public function index()
     {
-        $this->authorize('viewAny', Comment::class);
+        //$this->authorize('viewAny', Comment::class);
         return new CommentCollection(Comment::paginate(3));
     }
     public function show(Comment $comment)

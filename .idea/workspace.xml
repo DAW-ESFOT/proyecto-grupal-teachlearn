@@ -16,16 +16,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="125dbac5-cc0d-4dfa-bd92-6cc50baf7954" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Teachlearn.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Teachlearn.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SubjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SubjectController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TutorialController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TutorialController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Tutorial.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Tutorial.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Resources/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Policies/CommentPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Policies/CommentPolicy.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Policies/TutorialPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Policies/TutorialPolicy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Tutorial.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Tutorial.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_24_132307_add_rol_column_user.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_19_164743_add_user_id_column_tutorial.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_19_164743_add_user_id_column_tutorial.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/TutorialsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/TutorialsTableSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
@@ -147,6 +152,11 @@
       <path value="$PROJECT_DIR$/vendor/namshi/jose" />
       <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
       <path value="$PROJECT_DIR$/vendor/tymon/jwt-auth" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit" />
     </include_path>
   </component>
   <component name="ProjectId" id="1m1zkMjnKzfMLvPtNiO4EWiWgxw" />
@@ -174,7 +184,7 @@
       <method v="2" />
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -198,11 +208,13 @@
       <workItem from="1609940603683" duration="935000" />
       <workItem from="1610392576492" duration="2521000" />
       <workItem from="1611446403424" duration="10584000" />
+      <workItem from="1611696233536" duration="22146000" />
+      <workItem from="1611759162967" duration="8860000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -215,5 +227,15 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="450" y="190" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611708121404">
+      <screen x="0" y="0" width="1440" height="870" />
+    </state>
+    <state x="450" y="190" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.870/-800.91.800.570@0.0.1440.870" timestamp="1611708121404" />
+    <state x="500" y="190" key="FileChooserDialogImpl" timestamp="1611706163673">
+      <screen x="0" y="0" width="1440" height="870" />
+    </state>
+    <state x="500" y="190" key="FileChooserDialogImpl/0.0.1440.870/-800.91.800.570@0.0.1440.870" timestamp="1611706163673" />
   </component>
 </project>

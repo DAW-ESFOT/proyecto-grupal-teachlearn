@@ -6,6 +6,7 @@ use App\Tutorial;
 use Illuminate\Http\Request;
 use App\Http\Resources\Tutorial as TutorialResource;
 use App\Http\Resources\TutorialCollection;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 
@@ -42,7 +43,6 @@ class TutorialController extends Controller
             'topic' =>'required|string',
             'price'=> 'required|string',
             'image' => 'required|image',
-            //'image' => 'required|string',
             'duration'=>'required',
             'subject_id' => 'required|exists:subjects,id',
 
@@ -67,6 +67,17 @@ class TutorialController extends Controller
         $tutorial->update($request->all());
         return response()->json($tutorial, 200);
     }
+
+    public function accept(Request $request, Tutorial $tutorial)
+    {
+        //$this->authorize('choose',$tutorial);
+
+
+        $tutorial->teacher_id = Auth::id();
+        $tutorial->save();
+        return response()->json($tutorial, 200);
+    }
+
     public function delete(Request $request, Tutorial $tutorial)
     {
         $this->authorize('delete',$tutorial);
