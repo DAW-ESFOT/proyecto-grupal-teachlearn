@@ -14,7 +14,7 @@ class SubjectController extends Controller
     ];
     public function index()
     {
-        $this->authorize('viewAny', Subject::class);
+        //$this->authorize('viewAny', Subject::class);
         return Subject::all();
     }
     public function show(Subject $subject)
