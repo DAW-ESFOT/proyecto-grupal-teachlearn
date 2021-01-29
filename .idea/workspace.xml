@@ -16,23 +16,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="125dbac5-cc0d-4dfa-bd92-6cc50baf7954" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Teachlearn.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Teachlearn.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TutorialController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TutorialController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Tutorial.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Tutorial.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Policies/CommentPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Policies/CommentPolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Policies/TutorialPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Policies/TutorialPolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Tutorial.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Tutorial.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_19_164743_add_user_id_column_tutorial.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_19_164743_add_user_id_column_tutorial.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/TutorialsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/TutorialsTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +152,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../teachlearn" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -210,6 +194,10 @@
       <workItem from="1611446403424" duration="10584000" />
       <workItem from="1611696233536" duration="22146000" />
       <workItem from="1611759162967" duration="8860000" />
+      <workItem from="1611837711238" duration="2435000" />
+      <workItem from="1611864575829" duration="1010000" />
+      <workItem from="1611866091071" duration="2385000" />
+      <workItem from="1611869640759" duration="4693000" />
     </task>
     <servers />
   </component>
@@ -233,9 +221,9 @@
       <screen x="0" y="0" width="1440" height="870" />
     </state>
     <state x="450" y="190" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.870/-800.91.800.570@0.0.1440.870" timestamp="1611708121404" />
-    <state x="500" y="190" key="FileChooserDialogImpl" timestamp="1611706163673">
+    <state x="500" y="190" key="FileChooserDialogImpl" timestamp="1611876200577">
       <screen x="0" y="0" width="1440" height="870" />
     </state>
-    <state x="500" y="190" key="FileChooserDialogImpl/0.0.1440.870/-800.91.800.570@0.0.1440.870" timestamp="1611706163673" />
+    <state x="500" y="190" key="FileChooserDialogImpl/0.0.1440.870/-800.91.800.570@0.0.1440.870" timestamp="1611876200577" />
   </component>
 </project>
