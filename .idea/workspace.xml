@@ -19,6 +19,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SubjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SubjectController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/TutorialsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/TutorialsTableSeeder.php" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,9 +197,11 @@
       <workItem from="1611446403424" duration="10584000" />
       <workItem from="1611696233536" duration="22146000" />
       <workItem from="1611759162967" duration="8860000" />
+
       <workItem from="1611872881745" duration="7062000" />
       <workItem from="1614648574980" duration="754000" />
       <workItem from="1614692862387" duration="4861000" />
+
     </task>
     <servers />
   </component>
@@ -226,9 +229,9 @@
       <screen x="0" y="0" width="1440" height="870" />
     </state>
     <state x="450" y="190" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.870/-800.91.800.570@0.0.1440.870" timestamp="1611708121404" />
-    <state x="500" y="190" key="FileChooserDialogImpl" timestamp="1611706163673">
+    <state x="500" y="190" key="FileChooserDialogImpl" timestamp="1611876200577">
       <screen x="0" y="0" width="1440" height="870" />
     </state>
-    <state x="500" y="190" key="FileChooserDialogImpl/0.0.1440.870/-800.91.800.570@0.0.1440.870" timestamp="1611706163673" />
+    <state x="500" y="190" key="FileChooserDialogImpl/0.0.1440.870/-800.91.800.570@0.0.1440.870" timestamp="1611876200577" />
   </component>
 </project>

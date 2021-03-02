@@ -17,6 +17,7 @@ class SubjectController extends Controller
     {
         //$this->authorize('viewAny', Subject::class);
         return response()->json(new SubjectCollection(Subject::paginate()),200);
+
     }
     public function show(Subject $subject)
     {
