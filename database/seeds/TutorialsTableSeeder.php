@@ -44,7 +44,7 @@ class TutorialsTableSeeder extends Seeder
             // iniciamos sesión con este usuario
             JWTAuth::attempt(['email' => $user->email, 'password' => '123123']);
             $num_tutorials=3;
-            $image_name=$faker->image('public/storage/tutorials',400,250,null,false);
+            $image_name=$faker->image('public/storage',400,250,null,false);
             for ($i = 0; $i < $num_tutorials; $i++) {
                 $subject=$faker->randomElement($subjects);
                 $teacher=$faker->randomElement($teachers);
