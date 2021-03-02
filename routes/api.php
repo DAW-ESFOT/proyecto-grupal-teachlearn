@@ -22,6 +22,7 @@ use Illuminate\Http\Request;
 Route::post('register', 'UserController@register');
 Route::post('login', 'UserController@authenticate');
 
+
 Route::get('subjects', 'SubjectController@index');
 Route::get('subjects/{subject}', 'SubjectController@show');
 
@@ -30,6 +31,7 @@ Route::get('comments', 'CommentController@index');
 
 Route::group(['middleware' => ['jwt.verify']], function() {
 
+    Route::post('users/{user}', 'UserController@logout');
     //usuario
     Route::get('users', 'UserController@index');
     Route::get('user', 'UserController@getAuthenticatedUser');
