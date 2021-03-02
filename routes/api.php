@@ -31,13 +31,13 @@ Route::get('comments', 'CommentController@index');
 
 Route::group(['middleware' => ['jwt.verify']], function() {
 
-    Route::post('users/{user}', 'UserController@logout');
     //usuario
     Route::get('users', 'UserController@index');
     Route::get('user', 'UserController@getAuthenticatedUser');
     Route::get('users/{user}', 'UserController@show');
     Route::put('users/{user}', 'UserController@update');
     Route::delete('users/{user}', 'UserController@delete');
+    Route::post('logout', 'UserController@logout');
 
     //Tutorias
     Route::get('tutorials', 'TutorialController@index');
