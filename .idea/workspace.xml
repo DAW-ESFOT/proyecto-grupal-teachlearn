@@ -17,6 +17,9 @@
   <component name="ChangeListManager">
     <list default="true" id="125dbac5-cc0d-4dfa-bd92-6cc50baf7954" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SubjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SubjectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/TutorialsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/TutorialsTableSeeder.php" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +93,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
       <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
       <path value="$PROJECT_DIR$/vendor/symfony/translation" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
       <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
       <path value="$PROJECT_DIR$/vendor/composer" />
@@ -141,6 +143,7 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/complexity" />
       <path value="$PROJECT_DIR$/vendor/sebastian/cli-parser" />
       <path value="$PROJECT_DIR$/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
     </include_path>
   </component>
   <component name="ProjectId" id="1m1zkMjnKzfMLvPtNiO4EWiWgxw" />
@@ -194,11 +197,11 @@
       <workItem from="1611446403424" duration="10584000" />
       <workItem from="1611696233536" duration="22146000" />
       <workItem from="1611759162967" duration="8860000" />
-      <workItem from="1611837711238" duration="2435000" />
-      <workItem from="1611864575829" duration="1010000" />
-      <workItem from="1611866091071" duration="2385000" />
-      <workItem from="1611869640759" duration="4693000" />
-      <workItem from="1611884234650" duration="833000" />
+
+      <workItem from="1611872881745" duration="7062000" />
+      <workItem from="1614648574980" duration="754000" />
+      <workItem from="1614692862387" duration="4861000" />
+
     </task>
     <servers />
   </component>
@@ -218,6 +221,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="448" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1611880228700">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="448" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728/1366.0.1440.860@0.0.1366.728" timestamp="1611880228700" />
     <state x="450" y="190" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611708121404">
       <screen x="0" y="0" width="1440" height="870" />
     </state>

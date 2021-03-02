@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Subject;
 use Illuminate\Http\Request;
 use App\Http\Resources\Subject as SubjectResource;
+use App\Http\Resources\SubjectCollection;
 
 class SubjectController extends Controller
 {
@@ -15,7 +16,8 @@ class SubjectController extends Controller
     public function index()
     {
         //$this->authorize('viewAny', Subject::class);
-        return Subject::all();
+        return response()->json(new SubjectCollection(Subject::paginate()),200);
+
     }
     public function show(Subject $subject)
     {
