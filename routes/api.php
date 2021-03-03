@@ -18,6 +18,7 @@ use Illuminate\Http\Request;
 */
 
 //Users
+Route::group(['middleware' => ['cors']], function () {
 
 Route::post('register', 'UserController@register');
 Route::post('login', 'UserController@authenticate');
@@ -62,6 +63,7 @@ Route::group(['middleware' => ['jwt.verify']], function() {
     //Turoria teacher
     Route::post('tutorials/{tutorial}/teachers', 'TutorialController@accept');
 
+});
 });
 
 
