@@ -18,9 +18,9 @@ class SubjectsTableSeeder extends Seeder
         // conviene hacerlo antes del for para que el seeder
         // no se vuelva lento.
         // Generar algunos
-        $name=['Matematicas','Ingles','Quimica','Fisica','Geometria'];
+        $name=['Matematicas','Ingles','Quimica','Física','Geometría','Frances','Programación','Biología','Contabilidad','Escritura acádemica'];
         $level=['basic','highSchool'];
-        for($i = 0; $i < 10 ; $i++) {
+        for($i = 0; $i < 15 ; $i++) {
             Subject::create([
                 'name'=>$faker->randomElement($name),
                 'level'=>$faker->randomElement($level),

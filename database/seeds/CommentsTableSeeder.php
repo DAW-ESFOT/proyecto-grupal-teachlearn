@@ -22,10 +22,12 @@ class CommentsTableSeeder extends Seeder
         // iniciamos sesión con cada uno
             JWTAuth::attempt(['email' => $user->email, 'password' => '123123']);
         // Creamos un comentario para cada artículo con este usuario
+            for($i = 0; $i < 3 ; $i++) {
             Comment::create([
                 'text' => $faker->paragraph,
                 'user_id'=> $user->id,
             ]);
+            }
         }
     }
 }

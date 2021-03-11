@@ -15,7 +15,7 @@ class CreateSubjectsTable extends Migration
     {
         Schema::create('subjects', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->enum('name',['Matematicas','Ingles','Quimica','Fisica','Geometria']);
+            $table->enum('name',['Matematicas','Ingles','Quimica','Física','Geometría','Frances','Programación','Biología','Contabilidad','Escritura acádemica']);
             $table->enum('level',['basic','highSchool']);
             $table->timestamps();
         });
