@@ -17,7 +17,7 @@ class User extends Authenticatable implements JWTSubject
      * @var array
      */
     protected $fillable = [
-        'name','last_name','birthday','phone','email','password','role'];
+        'name','last_name','birthday','phone','email','password','role','biography'];
 
     const ROLE_SUPERADMIN = 'ROLE_SUPERADMIN';
     const ROLE_TEACHER = 'ROLE_TEACHER';

@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             //$table->enum('rol_type',['student','teacher']);
             $table->enum('role',['ROLE_STUDENT','ROLE_TEACHER','ROLE_SUPERADMIN']);
+            $table->string('biography');
             $table->rememberToken();
             $table->timestamps();
         });

@@ -30,6 +30,7 @@ class UsersTableSeeder extends Seeder
             'password' => $password,
             //'rol_type' => 'Admin',
             'role'=> User::ROLE_SUPERADMIN,
+            'biography'=>$faker->paragraph,
         ]);
         // Generar algunos usuarios
        // $rol=['teacher','student'];
@@ -44,6 +45,7 @@ class UsersTableSeeder extends Seeder
                 'password' => $password,
                 //'rol_type'=>$faker->randomElement($rol),
                 'role'=> $faker->randomElement($role),
+                'biography'=>$faker->paragraph,
             ]);
 
             $user->subjects()->saveMany(
