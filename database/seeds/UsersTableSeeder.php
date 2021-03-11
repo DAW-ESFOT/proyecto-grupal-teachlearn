@@ -34,7 +34,7 @@ class UsersTableSeeder extends Seeder
         // Generar algunos usuarios
        // $rol=['teacher','student'];
         $role=['ROLE_STUDENT','ROLE_TEACHER'];
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 0; $i < 100; $i++) {
             $user=User::create([
                 'name' => $faker->firstName,
                 'last_name' => $faker->lastName,
