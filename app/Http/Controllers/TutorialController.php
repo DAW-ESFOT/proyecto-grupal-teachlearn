@@ -22,6 +22,16 @@ class TutorialController extends Controller
         //return response()->json(new TutorialCollection(Tutorial::all()),200);
         return new TutorialCollection(Tutorial::paginate(10));
     }
+
+    public function myTutorials()
+    {
+        $user = Auth::user();
+        if($user->role === 'ROLE_TEACHER') {
+            return new TutorialCollection($user->teacherTutorials);
+        }
+        return new TutorialCollection($user->studentTutorials);
+    }
+
     public function show(Tutorial $tutorial)
     {
         $this->authorize('view', $tutorial);

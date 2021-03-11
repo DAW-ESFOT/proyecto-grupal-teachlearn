@@ -41,6 +41,7 @@ Route::group(['middleware' => ['jwt.verify']], function() {
     Route::post('logout', 'UserController@logout');
 
     //Tutorias
+    Route::get('my-tutorials', 'TutorialController@myTutorials');
     Route::get('tutorials', 'TutorialController@index');
     Route::get('tutorials/{tutorial}', 'TutorialController@show');
     Route::post('tutorials', 'TutorialController@store');

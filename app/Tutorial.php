@@ -19,11 +19,11 @@ class Tutorial extends Model
     }
     public function student()
     {
-        return $this->belongsTo('App\User\student_id');
+        return $this->belongsTo('App\User', 'student_id');
     }
     public function teacher()
     {
-        return $this->belongsTo('App\User\teacher_id');
+        return $this->belongsTo('App\User', 'teacher_id');
     }
 
     public function subject()
