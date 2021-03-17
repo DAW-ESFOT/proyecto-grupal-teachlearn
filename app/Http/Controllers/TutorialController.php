@@ -16,11 +16,19 @@ class TutorialController extends Controller
         'required'=>'El compo: atribute es obligatorio',
 
     ];
-    public function index()
+    public function index($filter)
     {
         $this->authorize('viewAny', Tutorial::class);
+        if($filter === 'all'){
+            return new TutorialCollection(Tutorial::all());
+        }
         //return response()->json(new TutorialCollection(Tutorial::all()),200);
-        return new TutorialCollection(Tutorial::paginate(10));
+        return new TutorialCollection(Tutorial::paginate($filter));
+    }
+
+    public function getPendingTutorials() {
+        $this->authorize('viewAny', Tutorial::class);
+        return new TutorialCollection(Tutorial::where('teacher_id', null)->paginate(10));
     }
 
     public function myTutorials()
@@ -52,7 +60,7 @@ class TutorialController extends Controller
             'observation'=> 'required|string',
             'topic' =>'required|string',
             'price'=> 'required|string',
-            'image' => 'required|image',
+            'image' => 'image',
             'duration'=>'required',
             'subject_id' => 'required|exists:subjects,id',
 

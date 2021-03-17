@@ -42,7 +42,8 @@ Route::group(['middleware' => ['jwt.verify']], function() {
 
     //Tutorias
     Route::get('my-tutorials', 'TutorialController@myTutorials');
-    Route::get('tutorials', 'TutorialController@index');
+    Route::get('tutorials/{filter}', 'TutorialController@index');
+    Route::get('tutorials/pending', 'TutorialController@getPendingTutorials');
     Route::get('tutorials/{tutorial}', 'TutorialController@show');
     Route::post('tutorials', 'TutorialController@store');
     Route::put('tutorials/{tutorial}', 'TutorialController@update');
