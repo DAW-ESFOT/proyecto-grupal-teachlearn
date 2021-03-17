@@ -27,6 +27,7 @@ class TutorialController extends Controller
     }
 
     public function getPendingTutorials() {
+
         $this->authorize('viewAny', Tutorial::class);
         return new TutorialCollection(Tutorial::where('teacher_id', null)->paginate(10));
     }
